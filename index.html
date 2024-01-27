@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+
 
     <!-- =====BOX ICONS===== -->
     <!-- <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Portfolio website complete</title>
+
+    <title>My Portfolio</title>
 </head>
 
 <body>
@@ -19,7 +23,7 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo">MAB</a>
+                <a href="#" class="nav__logo">RemahBiskuit</a>
             </div>
 
             <div class="nav__menu" id="nav-menu">
@@ -87,7 +91,7 @@
                     <p class="about__text">Saya adalah seorang Pengembang Perangkat Lunak yang berspesialisasi dalam
                         Pengembangan Web
                         Fullstack. Selain itu saya juga menguasai
-                        beberapa framework seperti web CodeIgniter,
+                        beberapa framework web seperti CodeIgniter,
                         Laravel, dan Flask.</p>
                 </div>
             </div>
@@ -100,8 +104,7 @@
             <div class="skills__container bd-grid">
                 <div>
                     <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id
-                        vero amet, alias architecto consectetur error eum eaque sit.</p>
+                    <p class="skills__text">Dibawah ini adalah beberapa bahasa pemrograman yang saya kuasai.</p>
                     <div class="skills__data">
                         <div class="skills__names">
                             <i class='bx bxl-html5 skills__icon'></i>
@@ -140,6 +143,18 @@
                     </div>
                     <div class="skills__data">
                         <div class="skills__names">
+                            <i class='bx bxl-python skills__icon'></i>
+                            <span class="skills__name">PYTHON</span>
+                        </div>
+                        <div class="skills__bar skills__py">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">55%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
                             <i class='bx bxl-flutter skills__icon'></i>
                             <span class="skills__name">FLUTTER</span>
                         </div>
@@ -147,12 +162,12 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">70%</span>
+                            <span class="skills__percentage">75%</span>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    <img src="assets/img/skils.jpg" alt="" class="skills__img">
                 </div>
             </div>
         </section>
@@ -162,24 +177,14 @@
             <h2 class="section-title">Portfolio</h2>
 
             <div class="work__container bd-grid">
-                <a href="" class="work__img">
-                    <img src="assets/img/work1.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work2.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work3.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work5.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work6.jpg" alt="">
-                </a>
+                <a href="assets/img/work1.png" data-lightbox="portfolio"
+                    data-title="Aplikasi E-PKK Diskominfo Kabupaten Malang" class="work__img"><img
+                        src="assets/img/work1.png" alt=""></a>
+                <a href="assets/img/work2.png" data-lightbox="portfolio"
+                    data-title="Sistem Deteksi Masker Berbasis Web Menggunakan Python | <a href='https://github.com/RemahBiskuit/SIPEMAS'>Go to Repo</a>"
+                    class="work__img"><img src="assets/img/work2.png" alt=""></a>
+                <a href="assets/img/work3.jpg" data-lightbox="portfolio" data-title="Landing page STIL Autocare"
+                    class="work__img"><img src="assets/img/work3.jpg" alt=""></a>
             </div>
         </section>
 
@@ -201,14 +206,14 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">MAB</p>
+        <p class="footer__title">RemahBiskuit</p>
         <div class="footer__social">
             <a href="https://discord.gg/eBu9KGR2UU" class="footer__icon"><i class='bx bxl-discord'></i></a>
             <a href="https://www.instagram.com/m.arifbillah07/" class="footer__icon"><i
                     class='bx bxl-instagram'></i></a>
             <a href="https://twitter.com/CinnamonShrine" class="footer__icon"><i class='bx bxl-twitter'></i></a>
         </div>
-        <p class="footer__copy">&#169; RemahBiskuit. All rigths reserved</p>
+        <p class="footer__copy">Copyright &#169; 2024, RemahBiskuit. All rigths reserved</p>
     </footer>
 
 
@@ -217,6 +222,7 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- Setup and start animation! -->
@@ -227,6 +233,21 @@
             backSpeed: 70,
             loop: true
         });
+    </script>
+
+    <!-- Lightbox Option -->
+    <script>
+        lightbox.option({
+            'albumLabel': 'Image %1 of %2',
+            'alwaysShowNavOnTouchDevices': true,
+            'fadeDuration': 600,
+            'fitImagesInViewport': true,
+            'resizeDuration': 700,
+            'wrapAround': true,
+            'showImageNumberLabel': false,
+            'disableScrolling': true,
+            'sanitizeTitle': false
+        })
     </script>
 </body>
 
